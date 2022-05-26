@@ -1,4 +1,26 @@
-.test
-{
-    background-color: red;
+body {
+    background: #000000;
+    color: #FFFFFF;
+}
+
+#psi-table tr {
+    border-bottom: 1px solid #FFFFFF;
+    width: 100px;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+}
+
+thead tr th {
+    align-items: center;
+}
+
+
+.ctn-content {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 }

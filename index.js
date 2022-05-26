@@ -40,8 +40,6 @@ function loadJSONPSI() {
 
             tbodyContent += htmlString;
         }
-
-        console.log(tbodyContent)
         // central
         // east
         // national
@@ -53,12 +51,18 @@ function loadJSONPSI() {
         var psiTable = document.getElementById("psi-table");
         var psiTbody = psiTable.querySelector("tbody")
 
-        psiTbody.innerHTML= "<tbody>"+tbodyContent+"</tbody>";
-        // console.log(psiTable)
-        // console.log(psiReading)
+        psiTbody.innerHTML = "<tbody>" + tbodyContent + "</tbody>";
     }
-
 }
 
 
-loadJSONPSI();
+
+window.onload = () => {
+
+    // Get the date
+    var date = new Date();
+
+    var dt = date.toLocaleString('en-GB');
+    document.getElementById("last-updated").innerHTML = dt;
+    loadJSONPSI();
+}
